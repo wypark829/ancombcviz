@@ -46,6 +46,8 @@ def plot_group_bar(
     low_rows.rename(columns={"Log2(FC)":"log2FC"}, inplace=True)
     
     # fc_cut is factor use.
+    # fc_cut means a feature over 2.5 fold than reference group..
+    ## fc_cut = 0.9; ~ 2.5
     def label_cat(row):
         if row["Signif"] and row["log2FC"] > fc_cut:
             return f"{group}"
