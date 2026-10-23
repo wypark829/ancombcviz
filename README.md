@@ -6,7 +6,7 @@ In ANCOM-BC, program of analysis to diffrential abundance. This tool use composi
 In ANCOMBCviz, this ANCOM-BC results file make image file. plot type is `barplot`, `heatmap`.
 This package also need `numpy >= 2.0`, `pandas`, `matplotlib >= 0.7.1`, `seaborn`, `skbio.stats.composition.ancom`.
 
-## Natural log fold change recommend cutoff
+## Recommended Natural log fold change cutoff
 ```
 fc = 0.9
 ln(fc) ~ 2.5 fold
