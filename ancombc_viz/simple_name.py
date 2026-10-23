@@ -49,12 +49,12 @@ def extract_species(top:str) -> str:
         return "Others"
 
     parts = top.split(";")
-    p = [x for x in parts if x.startwith("p__")]
-    c = [x for x in parts if x.startwith("c__")]
-    o = [x for x in parts if x.startwith("o__")]
-    f = [x for x in parts if x.startwith("f__")]
-    g = [x for x in parts if x.startwith("g__")]
-    s = [x for x in parts if x.startwith("s__")]
+    p = [x for x in parts if x.startswith("p__")]
+    c = [x for x in parts if x.startswith("c__")]
+    o = [x for x in parts if x.startswith("o__")]
+    f = [x for x in parts if x.startswith("f__")]
+    g = [x for x in parts if x.startswith("g__")]
+    s = [x for x in parts if x.startswith("s__")]
 
     stripped = top.strip()
     last = parts[-1]
@@ -79,6 +79,6 @@ def extract_species(top:str) -> str:
         pg = ";".join(p + g)
 
     # Normal_ p + s
-        pg = ";".koin(p + s)
+        pg = ";".join(p + s)
 
     return pg if pg else top
