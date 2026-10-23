@@ -26,7 +26,7 @@ class Analyzer:
         self.ft_group_T[formula] = self.mt[formula]
     
     def ancombc_analysis(self, feature_name_map=None):
-        otu = self.ft + 1
+        otu = self.ft + 1 ## ANCOM-BC's normalization method
         meta = self.mt
 
         self.results = ancombc(otu, meta, formula=self.formula) ## ANCOM-BC activation
