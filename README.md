@@ -20,7 +20,7 @@ ln(fc) ~ 2.5 fold
 ```
 conda env create -f environment.yml
 ```
-If finished installation of conda env. activate conda and installation by pip.
+If finished installation of conda env. activate conda and installation using by pip.
 ```
 cd ancombc_viz ## Before do this code, you clonning this repository by your directory.
 ```
