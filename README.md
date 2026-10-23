@@ -1,4 +1,6 @@
 ## ANCOMBCviz
+[![PyPI version](https://img.shields.io/pypi/v/ancombcviz?logo=pypi&logoColor=white)](https://pypi.org/project/ancombcviz/)
+
 ANCOMBCviz is a Python package for analyzing differential abundance of group by microbiome composition and visualizing the resulting ANCOM-BC as a plot.
 
 ## Method

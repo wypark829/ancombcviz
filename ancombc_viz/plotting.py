@@ -11,6 +11,7 @@ def plot_group_bar(
         fc_cut=0.0,
         top_name_map=None,
         ax=None,
+        save_path=None,
 ):
     
     """
@@ -36,6 +37,12 @@ def plot_group_bar(
     -----------
     ax: matplotlib.axes.Axes
     """
+    plt.rcParams['font.size'] = 7
+    plt.rcParams['font.family'] = 'Arial'   
+    plt.rcParams['pdf.fonttype'] = 42
+    # affects whiskers, medians, caps (all Line2D)
+    plt.rcParams['lines.linewidth'] = 0.6
+
 
     covariate_value = f"Group[T.{group}]"
 
@@ -105,3 +112,9 @@ def plot_group_bar(
     ax.legend(frameon=True, bbox_to_anchor=(1.02, 1), loc="upper left")
 
     ## Save
+    if save_path is not None:
+        ax.figure.savefig(
+            save_path,
+            dpi=300,
+            bbox_inches="tight",
+        )
