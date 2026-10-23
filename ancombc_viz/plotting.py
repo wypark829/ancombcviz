@@ -47,7 +47,7 @@ def plot_group_bar(
     
     # fc_cut is factor use.
     # fc_cut means a feature over 2.5 fold than reference group..
-    ## fc_cut = 0.9; ~ 2.5
+    ## fc_cut = 0.9) ~ 2.5x
     def label_cat(row):
         if row["Signif"] and row["log2FC"] > fc_cut:
             return f"{group}"
@@ -66,7 +66,7 @@ def plot_group_bar(
         low_rows
         .sort_values("log2FC", key=lambda s: s.abs(), ascending=False)
         .head(top_n)
-    )
+    ) ## Sorting
 
 
     # x-axis feature scaling by feature abundance ranking
@@ -92,7 +92,7 @@ def plot_group_bar(
         palette=palette,
         order=order_feat,
         ax=ax,
-    )
+    ) ## Barplot (ANCOM-BC basic visualization method)
 
     ax.axvline(0, color="black", linewidth=1)
     ax.set_xlabel("Log2 fold change")
@@ -103,3 +103,5 @@ def plot_group_bar(
 
     # legend
     ax.legend(frameon=True, bbox_to_anchor=(1.02, 1), loc="upper left")
+
+    ## Save

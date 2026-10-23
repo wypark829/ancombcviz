@@ -35,7 +35,8 @@ pip install ancombcviz
 ## Usage
 ### Python API
 ```
-from ancombc_viz.simple_name import extract_p_g_or_f
+from ancombc_viz.simple_name import extract_p_g_or_f ## Genus annotation
+from ancombc_viz.simplt_name import extract_species ## Species annotation
 from ancombc_viz.plotting import plot_group_bar
 ```
 
